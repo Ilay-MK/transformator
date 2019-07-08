@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Страница не найдена</title>
+	<meta name="viewport" content="width=375">
+	<link type="text/css" href="/assets/common/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="/assets/common/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="/assets/common/css/bootstrap-override.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="/assets/common/css/error.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+<!-- container -->
+<div class="container">
+
+	<div class="row">
+		<div class="error-block jumbotron">
+			<h1>Страница не найдена</h1>
+
+			<h3>Нам не удалось найти указанную Вами страницу на нашем сайте</h3>
+
+							<br/>
+				<a class="btn btn-primary" href="/">Вернуться на главную</a>
+					</div>
+	</div>
+
+</div>
+<!-- /container -->
+</body>
+</html>

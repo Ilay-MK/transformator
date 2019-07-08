@@ -1,0 +1,52 @@
+.mobile-rotate-block {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 999;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background: #20222d url("../images/netbg.png") 49.95% 0;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 500px;
+		font-family: $font-merriweather;
+		font-weight: 300;
+		color: $color-white;
+	}
+
+	&__img {
+		flex: none;
+		margin-right: 41px;
+		width: 89px;
+		height: 96px;
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-size: 28px;
+		line-height: 1.36;
+	}
+
+	&__desc {
+		font-size: 12px;
+		line-height: 1.83;
+		letter-spacing: 0.2px;
+	}
+
+	.is-rotation-horizontal & {
+		display: flex;
+	}
+}

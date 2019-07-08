@@ -1,0 +1,58 @@
+// stylelint-disable no-empty-source
+
+@font-face {
+	src: url("../fonts/bookman-old-style/BookmanOldStyle.woff2") format("woff2"), url("../fonts/bookman-old-style/BookmanOldStyle.woff") format("woff");
+	font-family: "Bookman Old Style";
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	src: url("../fonts/Merriweather/Merriweather-Light.woff2") format("woff2"), url("../fonts/Merriweather/Merriweather-Light.woff") format("woff");
+	font-family: "Merriweather";
+	font-weight: 300;
+	font-style: normal;
+}
+
+// @font-face {
+// 	src: url("../fonts/Merriweather/Merriweather-LightItalic.woff") format("woff"),  url("../fonts/Merriweather/Merriweather-LightItalic.ttf") format("truetype");
+// 	font-family: "Merriweather";
+// 	font-weight: 300;
+// 	font-style: italic;
+// }
+
+@font-face {
+	src: url("../fonts/Merriweather/Merriweather-Regular.woff") format("woff"), url("../fonts/Merriweather/Merriweather-Regular.ttf") format("truetype");
+	font-family: "Merriweather";
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	src: url("../fonts/Merriweather/Merriweather-Bold.woff2") format("woff2"), url("../fonts/Merriweather/Merriweather-Bold.woff") format("woff");
+	font-family: "Merriweather";
+	font-weight: 700;
+	font-style: normal;
+}
+
+// @font-face {
+// 	src: url("../fonts/Merriweather/Merriweather-BoldItalic.woff") format("woff"), url("../fonts/Merriweather/Merriweather-BoldItalic.ttf") format("truetype");
+// 	font-family: "Merriweather";
+// 	font-weight: 700;
+// 	font-style: italic;
+// }
+
+@font-face {
+	src: url("../fonts/Alegreya-SC/AlegreyaSC-Bold.woff") format("woff"), url("../fonts/Alegreya-SC/AlegreyaSC-Bold.ttf") format("truetype");
+	font-family: "Alegreya SC";
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	src: url("../fonts/Alegreya-SC/AlegreyaSC-Regular.woff") format("woff"), url("../fonts/Alegreya-SC/AlegreyaSC-Regular.ttf") format("truetype");
+	font-family: "Alegreya SC";
+	font-weight: 400;
+	font-style: normal;
+}
+

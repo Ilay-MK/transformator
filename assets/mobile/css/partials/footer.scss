@@ -1,0 +1,83 @@
+.footer {
+	margin: auto;
+	padding: 25px 40px 40px;
+	max-width: 1280px;
+	font-family: $font-merriweather;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 1.83;
+	letter-spacing: 0.3px;
+	color: #aaadb9;
+	background-color: #181a22;
+
+	&__info {
+		color: #aaadb9;
+
+		a {
+			text-decoration: none;
+			color: #e6cd77;
+			transition: color 0.3s ease;
+
+			.is-device-desktop &:hover {
+				color: $color-white;
+			}
+		}
+	}
+
+	&__policy {
+		margin-bottom: 2px;
+		a{
+			text-decoration: none;
+			color: #e6cd77;
+			transition: color 0.3s ease;
+		}
+	}
+
+	&__copyright {
+		margin-bottom: 2px;
+		color: #595b69;
+	}
+}
+
+.footer-social {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin: 0 0 30px;
+	margin-left: -10px;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 6px;
+		width: 40px;
+		height: 40px;
+
+		svg {
+			display: block;
+			max-width: 30px;
+			max-height: 25px;
+			fill: rgba($color-white, 0.2);
+			transition: fill 0.3s ease;
+
+			@media (max-width: 500px) {
+				max-width: 20px;
+				max-height: 20px;
+				fill: $color-white;
+			}
+		}
+
+		.is-device-desktop &:hover {
+			svg {
+				fill: $color-white;
+			}
+		}
+
+		@media (max-width: 500px) {
+			margin: 0 10px;
+			width: 20px;
+			height: 20px;
+		}
+	}
+}

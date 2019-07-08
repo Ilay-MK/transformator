@@ -1,0 +1,103 @@
+.tabs {
+	&__btn {
+		position: relative;
+		flex: none;
+		outline: none;
+		border: none;
+		padding: 20px 0 40px;
+		min-width: 57px;
+		box-shadow: none;
+		font-family: $font-alegreya;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 0.67;
+		letter-spacing: 1.4px;
+		text-transform: uppercase;
+		color: $color-white;
+		background-color: transparent;
+		transition: color 0.3s ease;
+
+		&__icon {
+			position: absolute;
+			left: 50%;
+			bottom: -47px;
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 45px;
+			height: 45px;
+			background-color: #20222d;
+			opacity: 0;
+			transform: rotate(45deg) translateX(-75%);
+			transform-origin: 50%;
+			transition: opacity 0.3s ease;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				display: block;
+				width: 6px;
+				height: 6px;
+				background-color: #e6cd77;
+				transform: translate3d(-50%, -50%, 0);
+				transition: background-color 0.3s ease;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+
+		.is-device-desktop &:hover {
+			color: #e6cd77;
+		}
+
+		&.is-current {
+			color: #e6cd77;
+
+			.tabs__btn__icon {
+				opacity: 1;
+			}
+		}
+
+		@media (max-width: 1024px) {
+			width: auto;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin: auto;
+		padding-left: 152px;
+		max-width: 1280px;
+
+		@media (max-width: 1024px) {
+			overflow: visible;
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+	}
+
+	&__container {
+		padding: 100px 0;
+		background: #181a22;
+
+		.events-posters & {
+			padding-bottom: 80px;
+			// background: #181a22 url("../images/netbg.png") 49.95% 0;
+		}
+
+		.lifestyle-events & {
+			padding-bottom: 100px;
+		}
+
+		@media (max-width: 1024px) {
+			padding: 70px 0;
+		}
+	}
+}

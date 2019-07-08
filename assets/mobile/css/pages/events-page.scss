@@ -1,0 +1,181 @@
+.events-stats {
+	padding-top: 152px;
+
+	.heading {
+		padding-right: 20px;
+		padding-left: 40px;
+
+		&__text {
+			max-width: none;
+		}
+
+		&__desc {
+			max-width: none;
+		}
+	}
+
+	.eventstats {
+		margin-top: 60px;
+		margin-right: 0;
+		margin-left: 0;
+		padding-bottom: 0;
+
+		&__bg {
+			left: 40px;
+		}
+	}
+}
+
+.events-formats {
+	margin-top: 120px;
+	margin-bottom: 70px;
+
+	.heading {
+		&__text {
+			max-width: 710px;
+		}
+
+		&__line {
+			margin-left: 50px;
+		}
+
+		&__desc {
+			max-width: 400px;
+		}
+
+		@media (max-width: 1024px) {
+			margin-bottom: 50px;
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+	}
+
+	.formats-slider {
+		margin-bottom: 97px;
+	}
+
+	.formats-slider__slide {
+		height: 520px;
+
+		@media (max-width: 1024px) {
+			height: auto;
+		}
+	}
+
+	&__btn {
+		@media (max-width: 1024px) {
+			max-width: calc(100% - 80px);
+		}
+
+		@media (max-width: 600px) {
+			display: none;
+		}
+	}
+}
+
+.events-posters {
+	padding-top: 84px;
+
+	.heading {
+		margin-bottom: 50px;
+		padding-right: 20px;
+		padding-left: 40px;
+
+		&__desc {
+			max-width: 380px;
+		}
+	}
+}
+
+.events-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin: 0 auto;
+	padding-left: 155px;
+	max-width: 1280px;
+
+	&-button {
+		margin-top: 6px;
+		max-width: 710px;
+
+		.mobile-cont {
+			display: none;
+		}
+
+		@media (max-width: 840px) {
+			max-width: calc(100% - 80px);
+		}
+
+		@media (max-width: 540px) {
+			.mobile-cont {
+				display: inline;
+			}
+
+			.desktop-cont {
+				display: none;
+			}
+		}
+	}
+
+	.event {
+		margin-right: 120px;
+		margin-bottom: 160px;
+
+		@media (max-width: 1200px) {
+			margin-right: 0;
+		}
+
+		@media (max-width: 680px) {
+			margin-bottom: 30px;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		justify-content: space-between;
+		padding: 0 40px;
+	}
+
+	@media (max-width: 680px) {
+		justify-content: center;
+		margin-bottom: 0;
+	}
+}
+
+.events-mentors {
+	position: relative;
+	padding: 120px 0;
+	background-color: #e6cd77;
+
+	.heading {
+		&__text {
+			max-width: 612px;
+		}
+
+		&__line {
+			margin-left: 5px;
+		}
+
+		&__desc {
+			max-width: 363px;
+		}
+
+		@media (max-width: 1024px) {
+			padding-right: 40px;
+			padding-left: 40px;
+		}
+	}
+
+	.people-slider .swiper-slide {
+		height: 732px;
+
+		@media (max-width: 1024px) {
+			height: auto;
+		}
+	}
+
+	@media (max-width: 1024px) {
+		padding: 80px 0 140px;
+	}
+}

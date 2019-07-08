@@ -1,0 +1,145 @@
+.advantages {
+	margin: 143px auto 161px;
+	max-width: 640px;
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 85px;
+		box-sizing: border-box;
+		color: $color-white;
+
+		&--left {
+			margin-right: -52px;
+			padding-left: 10px;
+		}
+	}
+
+	&__textcol {
+		position: relative;
+		z-index: 2;
+		max-width: 340px;
+	}
+
+	&__title {
+		font-family: $font-merriweather;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 1.33;
+		white-space: nowrap;
+		color: $color-white;
+	}
+
+	&__desc {
+		margin-top: 15px;
+		max-width: 340px;
+		font-family: $font-merriweather;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 1.71;
+		letter-spacing: 0.3px;
+		color: #aaadb9;
+	}
+
+	&__diamond {
+		position: relative;
+		display: flex;
+		flex: none;
+		align-items: center;
+		justify-content: center;
+		width: 200px;
+		height: 200px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: 0;
+			display: block;
+			width: 285px;
+			height: 285px;
+			background-color: #20222d;
+			transform: translate3d(-50%, -50% , 0) rotate(45deg);
+			transform-origin: 50%;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: 1;
+			display: block;
+			width: 200px;
+			height: 200px;
+			background-color: #1d1f28;
+			transform: translate3d(-50%, -50% , 0) rotate(45deg);
+			transform-origin: 50%;
+
+			.is-browser-ie & {
+
+			}
+		}
+	}
+
+	&__num {
+		position: relative;
+		z-index: 2;
+		font-family: $font-manoldstyle;
+		font-size: 100px;
+		color: #e6cd77;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: -10px;
+			display: block;
+			width: 10px;
+			height: 10px;
+			background-color: #e6cd77;
+			transform: rotate(45deg) translateX(-100%);
+			transform-origin: 50%;
+		}
+	}
+
+	&__btn {
+		margin-top: 138px;
+
+		&.button {
+			margin-top: 138px;
+		}
+	}
+
+	&--light {
+		margin-bottom: 0;
+
+		.advantages__title {
+			color: #20222d;
+		}
+
+		.advantages__desc {
+			color: #776a3f;
+		}
+
+		.advantages__num {
+			color: #20222d;
+
+			&::before {
+				background-color: #20222d;
+			}
+		}
+
+		.advantages__diamond {
+			&::before {
+				background-color: #e6cd77;
+			}
+
+			&::after {
+				background-color: #edd480;
+			}
+		}
+	}
+}

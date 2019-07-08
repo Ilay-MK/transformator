@@ -1,0 +1,160 @@
+.heading {
+	margin: 0 auto 100px;
+	padding-right: 156px;
+	padding-left: 156px;
+	max-width: 1280px;
+
+	&__row {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+	}
+
+	&__text {
+		position: relative;
+		flex: none;
+		margin-bottom: -0.3em;
+		max-width: none;
+		font-family: $font-merriweather;
+		font-weight: 300;
+		font-size: 44px;
+		line-height: 1.3;
+		color: $color-white;
+
+		a {
+			text-decoration: none;
+			color: $color-white;
+		}
+	}
+
+	&__dot {
+		position: absolute;
+		left: -86px;
+		top: 0.5em;
+		display: block;
+		width: 11px;
+		height: 11px;
+		background-color: #e6cd77;
+		transform: rotate(45deg);
+		transform-origin: 50%;
+	}
+
+	&__line {
+		display: flex;
+		flex: 1;
+		align-items: center;
+		justify-content: center;
+		margin: 0 15px 0 100px;
+		width: 100%;
+
+		&::before {
+			content: "";
+			display: block;
+			flex: none;
+			width: 5px;
+			height: 5px;
+			background-color: #4c4e5d;
+			transform: rotate(45deg);
+			transform-origin: 50%;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			margin-left: 4px;
+			width: 100%;
+			height: 1px;
+			background-color: #4c4e5d;
+		}
+	}
+
+	&__title {
+		flex: none;
+		margin-bottom: -0.7em;
+		font-family: $font-alegreya;
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 1.83;
+		letter-spacing: 1.8px;
+		white-space: nowrap;
+		text-transform: uppercase;
+		color: #e6cd77;
+
+		span {
+			font-family: $font-merriweather;
+		}
+	}
+
+	&__desc {
+		margin-top: 43px;
+		margin-left: 160px;
+		max-width: 450px;
+		font-family: $font-merriweather;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 1.71;
+		letter-spacing: 0.3px;
+		color: $color-white;
+	}
+
+	&__phone {
+		margin-bottom: 10px;
+		font-family: $font-manoldstyle;
+		font-size: 48px;
+		line-height: 0.83;
+	}
+
+	&--dark {
+		.heading {
+			&__text {
+				color: #20222d;
+
+				&::before {
+					background-color: #20222d;
+				}
+			}
+
+			&__dot {
+				background-color: #20222d;
+			}
+
+			&__line {
+				&::before,
+				&::after {
+					background-color: #ccb360;
+				}
+			}
+
+			&__title {
+				color: #b08c11;
+			}
+
+			&__desc {
+				color: #181a22;
+			}
+		}
+	}
+
+	&--sub {
+		.heading__text {
+			&::before {
+				left: -83px;
+				width: 5px;
+				height: 5px;
+				background-color: $color-white;
+			}
+		}
+
+		.heading__dot {
+			left: -83px;
+			width: 5px;
+			height: 5px;
+			background-color: $color-white;
+		}
+
+		.heading__desc {
+			max-width: 400px;
+		}
+	}
+}

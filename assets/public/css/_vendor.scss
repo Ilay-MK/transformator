@@ -1,0 +1,12 @@
+@import "../../../node_modules/normalize-css/normalize";
+@import "../../../node_modules/swiper/dist/css/swiper";
+@import "../../../node_modules/perfect-scrollbar/css/perfect-scrollbar";
+@import "../../../node_modules/aos/dist/aos";
+
+body[data-aos-easing="ease"] [data-aos] {
+	transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 0.1);
+}
+
+[data-aos="fade-up"] {
+	transform: translate3d(0, 50px, 0);
+}

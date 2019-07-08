@@ -1,0 +1,133 @@
+.call {
+	overflow: hidden;
+	margin-top: 120px;
+
+	.heading {
+		margin-bottom: 68px;
+
+		&__text {
+			max-width: 700px;
+		}
+
+		&__desc {
+			max-width: 471px;
+		}
+
+		&__line {
+			margin-left: 70px;
+		}
+	}
+
+	.heading.big-line-margin {
+		.heading__line {
+			margin-left: 100px;
+		}
+	}
+
+	&__form {
+		margin: auto;
+		max-width: 970px;
+
+		button {
+			margin: 0;
+		}
+
+		.form__agreement {
+			margin: 25px 0 0;
+			max-width: 100%;
+		}
+	}
+}
+
+.contacts {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin: 80px auto 70px;
+	padding: 0 155px;
+	max-width: 1280px;
+
+	&__item {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		width: 33.3333%;
+		font-family: $font-merriweather;
+		font-weight: 300;
+		font-size: 12px;
+		line-height: 1.83;
+		letter-spacing: 0.3px;
+		text-decoration: none;
+		color: $color-white;
+
+		a {
+			text-decoration: none;
+			color: $color-white;
+		}
+
+		.is-device-desktop &:hover {
+			svg {
+				fill: #e6cd77;
+			}
+
+			i {
+				border-color: #e6cd77;
+				color: #e6cd77;
+			}
+		}
+
+		&:first-child {
+			width: 35%;
+		}
+
+		&:nth-child(2) {
+			width: 38%;
+		}
+
+		&:nth-child(3) {
+			width: 25%;
+		}
+	}
+
+	&__text {
+		max-width: 176px;
+		line-height: 1.83em;
+
+		i {
+			display: inline-block;
+			border-bottom: 1px dotted rgba($color-white, 0.6);
+			font-style: normal;
+			color: $color-white;
+			transition:
+				color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
+				border-color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+		}
+	}
+
+	&__icon {
+		position: relative;
+		flex: none;
+		margin-right: 23px;
+		width: 38px;
+		height: 38px;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+			fill: $color-white;
+			transition: fill 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+		}
+
+		a {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 2;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

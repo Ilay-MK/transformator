@@ -1,0 +1,247 @@
+.button {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	margin: auto;
+	outline: none;
+	border: none;
+	padding: 0;
+	width: 100%;
+	height: 60px;
+	max-width: 970px;
+	box-shadow: none;
+	font-family: $font-alegreya;
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #181a22;
+	background-color: $color-white;
+	transition: color 0.3s ease;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #181a22;
+		transform: translateY(100%);
+		transition: transform 0.3s ease;
+		pointer-events: none;
+	}
+
+	span {
+		position: relative;
+		z-index: 1;
+		margin: auto;
+	}
+
+	svg {
+		position: relative;
+		z-index: 1;
+		display: block;
+		margin-right: 20px;
+		width: 20px;
+		height: 20px;
+		fill: #e6cd77;
+		transition: fill 0.3s ease;
+	}
+
+	.is-device-desktop &:hover {
+		color: $color-white;
+
+		&::before {
+			transform: translateY(0%);
+		}
+
+		svg {
+			fill: $color-white;
+		}
+	}
+
+	&--left {
+		&::before {
+			transform: translateX(-100%);
+		}
+
+		.is-device-desktop &:hover {
+			&::before {
+				transform: translateX(0%);
+			}
+		}
+	}
+
+	&--dark {
+		background-color: #e6cd77;
+
+		.is-device-desktop &:hover {
+			color: #e6cd77;
+		}
+	}
+
+	&--gray {
+		color: $color-white;
+		background-color: #333544;
+
+		&::before {
+			background-color: $color-white;
+		}
+
+		svg {
+			fill: $color-white;
+		}
+
+		.is-device-desktop &:hover {
+			color: #20222d;
+
+			svg {
+				fill: #20222d;
+			}
+		}
+	}
+
+	&--lined {
+		overflow: visible;
+		border: 2px solid #e6cd77;
+		color: #e6cd77;
+		background-color: transparent;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: -2px;
+			top: -2px;
+			z-index: 1;
+			border: 2px solid $color-white;
+			border-right: none;
+			width: calc(100% + 4px);
+			height: calc(100% + 4px);
+			background-color: transparent;
+			transform: scaleX(0);
+			transform-origin: 0 0;
+			transition: transform 0.4s ease;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: -2px;
+			top: -2px;
+			z-index: 1;
+			width: 2px;
+			height: calc(100% + 4px);
+			background-color: $color-white;
+			transform: scaleX(0);
+			transform-origin: 0 0;
+			transition: transform 0.4s ease;
+			transition-delay: 0;
+			pointer-events: none;
+		}
+
+		.is-device-desktop &:hover {
+			color: $color-white;
+
+			&::before {
+				transform: scaleX(1);
+			}
+
+			&::after {
+				transform: scaleX(1);
+				transition-delay: 0.4s;
+			}
+		}
+	}
+
+	&--lineddark {
+		border-color: #1d1f28;
+		color: #1d1f28;
+	}
+
+	&--linedlight {
+		border-color: $color-white;
+		color: $color-white;
+
+		&::before {
+			border-color: #e6cd77;
+		}
+
+		&::after {
+			background-color: #e6cd77;
+		}
+
+		svg {
+			fill: $color-white;
+		}
+
+		.is-device-desktop &:hover {
+			color: #e6cd77;
+
+			svg {
+				fill: #e6cd77;
+			}
+		}
+	}
+
+	&--whatsapp {
+		span {
+			margin-left: 0;
+		}
+
+		svg {
+			margin-left: auto;
+		}
+
+		a {
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 5;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&--inactive {
+		border-color: #414453;
+		color: #6b6d7f;
+		cursor: auto;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+
+		svg {
+			fill: #6b6d7f;
+		}
+
+		.is-device-desktop &:hover {
+			color: #6b6d7f;
+
+			svg {
+				fill: #6b6d7f;
+			}
+		}
+	}
+
+	.is-browser-ie & {
+		justify-content: flex-start;
+	}
+}
+
+.is-browser-ie a.button {
+	justify-content: center;
+
+	span,
+	svg {
+		margin-left: 0;
+	}
+}

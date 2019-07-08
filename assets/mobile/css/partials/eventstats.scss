@@ -1,0 +1,161 @@
+.eventstats {
+	position: relative;
+	margin: auto;
+	margin-right: -40px;
+	margin-left: -40px;
+	padding: 50px 0 0;
+	max-width: 1280px;
+	color: #20222d;
+
+	.slider-pagination {
+		position: static;
+		justify-content: center;
+		margin-top: 80px;
+	}
+
+	&__bg {
+		position: absolute;
+		left: 40px;
+		top: 5px;
+		z-index: 0;
+		width: 150vw;
+		height: 180px;
+		background-color: #e8ce78;
+	}
+
+	&__list {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		overflow: hidden;
+		margin-left: 40px;
+		opacity: 1;
+
+		.swiper-container {
+			overflow: visible;
+			margin-left: 0;
+			padding-left: 45px;
+			width: 260px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
+		margin-bottom: 0;
+		width: 33.33333%;
+		box-sizing: border-box;
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: -66px;
+			top: 39px;
+			display: block;
+			width: 11px;
+			height: 11px;
+			background-color: #20222d;
+			transform: rotate(45deg);
+			transform-origin: 50%;
+
+			@media (max-width: 1024px) {
+				left: -40px;
+				width: 7px;
+				height: 7px;
+			}
+		}
+
+		&:nth-child(1),
+		&:nth-child(3n+1) {
+			&::before {
+				display: none;
+			}
+		}
+
+		@media (max-width: 1200px) {
+			width: 50%;
+
+			&:nth-child(n) {
+				&::before {
+					display: none;
+				}
+			}
+
+			&:nth-child(2n) {
+				&::before {
+					display: block;
+				}
+			}
+		}
+
+		@media (max-width: 1024px) {
+			width: auto;
+
+			&:nth-child(n) {
+				&::before {
+					display: block;
+				}
+			}
+
+			&:nth-child(1) {
+				&::before {
+					display: none;
+				}
+			}
+
+			&.swiper-slide-active {
+				&::before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__num {
+		margin-right: 20px;
+		font-family: $font-manoldstyle;
+		font-size: 120px;
+		line-height: 0.75;
+		color: #20222d;
+
+		@media (max-width: 1024px) {
+			margin-right: 14px;
+		}
+	}
+
+	&__text {
+		max-width: 100px;
+		font-family: $font-merriweather;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 1.71;
+		letter-spacing: 0.3px;
+		color: #181a22;
+
+		@media (max-width: 1024px) {
+			font-size: 12px;
+		}
+	}
+
+	&--dark {
+		.eventstats__bg {
+			background-color: #181a22;
+		}
+
+		.eventstats__item::before {
+			background-color: #2b2d3c;
+		}
+
+		.eventstats__num {
+			color: #e6cd77;
+		}
+
+		.eventstats__text {
+			color: #aaadb9;
+		}
+	}
+}
